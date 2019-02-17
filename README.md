@@ -1,2 +1,2 @@
 # written_notes
-Repos for some of my scanned hand-written notes
+Repo for some of my scanned hand-written notes
