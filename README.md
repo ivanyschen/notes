@@ -1,2 +1,2 @@
-# written_notes
+# notes
 Repo for some of my notes
