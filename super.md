@@ -6,8 +6,8 @@ class Parent:
     def __init__(self):
         pass
     
-	def method1(self):
-	    pass
+    def method1(self):
+        pass
 
 class Child(Parent):
 		
