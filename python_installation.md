@@ -62,7 +62,7 @@
    sudo update-alternatives --install /usr/local/bin/python3 python3 /usr/bin/python3.7 1
    ```
 
-*  Update `python3` to opint to python3.7:
+*  Update `python3` to point to python3.7:
 
    ```bash
    sudo update-alternatives --config python3
