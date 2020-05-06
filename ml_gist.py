@@ -49,3 +49,16 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.1)
 
 model.fit(X_train, Y_train, batch_size=32, epochs=500, validation_data=(X_test, Y_test))
 
+#################################################
+# 1D Convolution in PyTorch
+#################################################
+import torch
+from torch.nn import Cov1d
+
+batch_size = 16
+word_emb_size = 4
+seq_len = 7
+input = torch.randn(batch_size, word_emb_size, seq_len)
+conv1 = Conv1d(in_channels=word_emb_size, out_channels=3, kernel_size=3)
+hidden1 = conv1(input)
+hidden2 = torch.max(hidden1, dim=2)
