@@ -120,5 +120,5 @@ do()
 
 ## Resource
 
-[1]: [Exceptional Exceptions - How to properly raise, handle and create them](Exceptional Exceptions - How to properly raise, handle and create them.)
+[1]: [Exceptional Exceptions - How to properly raise, handle and create them](https://www.youtube.com/watch?v=V2fGAv2R5j8)
 
