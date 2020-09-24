@@ -4,3 +4,18 @@
 - Three places where filtering can happen: in a **filtered query**, in **filter aggreations** and in **post filters**
 ![](https://github.com/ujhuyz0110/notes/blob/master/pics/three_filtering_places.png)
 [source: https://www.elastic.co/blog/found-optimizing-elasticsearch-searches]
+  - `filtered`-query can apply filters *before queries*. Example:
+  ```
+  query:
+   filtered:
+       query:
+              multi_match:
+              query: "query tuning"
+              fields: ["title^5", "body"]
+       filter:
+           term:
+               tag: "elasticsearch"
+               
+  Example taken from: https://www.elastic.co/blog/found-optimizing-elasticsearch-searches
+  ```
+  - `post_filter` is useful when you need *aggregations to be unfiltered but hits to be filtered*
