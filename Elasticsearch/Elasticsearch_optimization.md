@@ -27,7 +27,7 @@
 - Consider whether your aggregation can be implemented with a `filter` aggregation instead since you are already paying for the filters' memory.
 - **Aggregations are expensive**. Reuse cached results or skip them entirely if possible.
 - Think about how many top N results you really need to rank. If you really need to scroll through huge result sets, use `scroll` and `scan` APIs.
-![](https://github.com/ujhuyz0110/notes/blob/master/pics/three_filtering_places.png)
+![](https://github.com/ujhuyz0110/notes/blob/master/pics/where_scoring_happens.png)
 [source: https://www.elastic.co/blog/found-optimizing-elasticsearch-searches]
 - Do not shoehorn everything into a single search request.
 - If you use you use `_source` or `_fields` you will quickly **kill performance**. They access the stored fields data structure, which is intended to be used when accessing the resulting hits, not when processing millions of documents.
