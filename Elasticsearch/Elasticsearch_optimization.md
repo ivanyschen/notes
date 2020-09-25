@@ -19,3 +19,11 @@
   Example taken from: https://www.elastic.co/blog/found-optimizing-elasticsearch-searches
   ```
   - `post_filter` is useful when you need *aggregations to be unfiltered but hits to be filtered*
+- Combine filters with bool. Order filters by their selectivity. *Higher selectivity ones come first.*
+- Understand what filters can be cached and what can't.
+  - Cacheable filteres can reduce the burden of more expensive filters.
+- Consider whether your aggregation can be implemented with a `filter` aggregation instead since you are already paying for the filters' memory.
+- **Aggregations are expensive**. Reuse cached results or skip them entirely if possible.
+- Think about how many top N results you really need to rank. If you really need to scroll through huge result sets, use `scroll` and `scan` APIs.
+- Do not shoehorn everything into a single search request.
+- If you use you use `_source` or `_fields` you will quickly **kill performance**. They access the stored fields data structure, which is intended to be used when accessing the resulting hits, not when processing millions of documents.
