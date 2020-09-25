@@ -1,3 +1,5 @@
+# Tips for Elasticsearch Optimization
+
 - Using filters is essential to optimize the search.
   - The result of a filter can be cached and reused for subsequent searches because the result will be the same for all searches with the same filters. USing a compact bitmap to cach them is quite cheap.
   - Rule of thumb: use filters when you can and queries when you must.
@@ -27,3 +29,6 @@
 - Think about how many top N results you really need to rank. If you really need to scroll through huge result sets, use `scroll` and `scan` APIs.
 - Do not shoehorn everything into a single search request.
 - If you use you use `_source` or `_fields` you will quickly **kill performance**. They access the stored fields data structure, which is intended to be used when accessing the resulting hits, not when processing millions of documents.
+
+## Credits:
+- https://www.elastic.co/blog/found-optimizing-elasticsearch-searches
