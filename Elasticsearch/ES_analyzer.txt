@@ -1,0 +1,16 @@
+**********           ******************    - Receives the original text as a stream of characters and can transform the stream by adding, removing, or changing characters.
+*Analyzer* ----------*character filter*    - An analyzer can have 0 or more character filters, applied in order
+**********   |       ******************
+             |
+             |
+             |
+             |       ******************    - A tokenizer receives a stream of characters, breaks it up into individual tokens (usually individual words), and outputs a stream of tokens.
+             --------*    tokenizer   *    - An analyzer must have exactly one tokenizer
+             |       ******************
+             |
+             |
+             |
+             |       *****************    - A token filter receives the token stream and may add, remove, or change tokens.
+             --------* token filter  *    - An Analyzer can have 0 or more token filters, applied in order.
+                     *****************
+             
