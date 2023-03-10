@@ -1,0 +1,13 @@
+My note taken for the Full WEb Apps with FastAPI course
+
+1. Project Structure
+	my_web_app
+	|--data                 -> orm classes to be used by services
+	|--services             -> functions using orm classes definied in the data folder to communicate with databases
+	|--static               
+	|--templates           
+	|--viewmodels           -> viewmodel classes to be used by templates
+	|--views                -> files defining @router.get, etc
+	|--main.py              -> entry point of the web app.
+
+	
