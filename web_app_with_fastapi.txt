@@ -9,5 +9,13 @@ My note taken for the Full WEb Apps with FastAPI course
 	|--viewmodels           -> viewmodel classes to be used by templates
 	|--views                -> files defining @router.get, etc
 	|--main.py              -> entry point of the web app.
-
+2. Structure in the data folder
+	|
+	|--data
+	    |-- __all_models.py	-> import all the models defined in the data directory. For example from data.model1 import Model1, ...
+	    |-- db_session.py   -> define sessionmaker
+	    |-- modelbase.py    -> define base classs (declaractive base in sqlalchemy. metadata in SQLModel)
+	    |-- model1.py
+	    |-- model2.py
+	    |-- ..
 	
