@@ -37,3 +37,7 @@
 
 ## volumn Mounting (-volumn)
 - `docker run --rm --entrypoint sh -v /tmp/container:/tmp ubuntu -c "echo 'Hello there.' > /tmp/file && cat /tmp/file"`
+
+## Diagnosis
+`docker run --name=alpine --entrypoint=sleep -d alpine infinity`
+`docker stats`
